@@ -3,12 +3,13 @@
 <!-- Optional: Add your project logo/banner here -->
 <!-- ![Gem Project Banner/Logo](path/to/your/image.png) -->
 <!-- For now, a placeholder image: -->
-<p align="center">
-  <img src="https://placehold.co/600x300?text=Gem+AI+Assistant" alt="Gem Project Banner">
-</p>
+
 
 **Gem** is a modern, responsive web application that serves as a clone of Google's Gemini, leveraging the powerful **Gemini 1.5 Pro** model to provide an intelligent and interactive chat experience. It features user authentication, image input capabilities, speech recognition, and more, all built with a robust MERN-like stack.
-
+<p align="center">
+  <img src="./public/readme.png" alt="Gem Project Banner" width="700">
+   <img src="./public/login.png" alt="Gem Project Banner" width="700">
+</p>
 ---
 
 ## Table of Contents
