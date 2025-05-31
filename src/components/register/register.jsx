@@ -12,7 +12,7 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5137/api/auth/register', { // Adjust the endpoint as needed
+            const response = await fetch('http://localhost:3000/api/auth/register', { // Adjust the endpoint as needed
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
