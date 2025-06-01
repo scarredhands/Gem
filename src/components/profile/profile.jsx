@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Profile.css'; // Add your custom styles here
+import './profile.css'; // Add your custom styles here
 
 const Profile = () => {
   // Dummy user data
