@@ -4,7 +4,8 @@ import cors from 'cors';
 import multer from 'multer';
 import connectDB from './config/db.js'; // Added .js extension
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
-
+import authRoutes from './routes/auth.js';
+import chatRoutes from './routes/chats.js'; 
 // Load environment variables immediately
 dotenv.config();
 
@@ -188,8 +189,8 @@ app.post('/generate_with_image', (req, res) => {
 
 
 // Existing routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/chat', require('./routes/chat'));
+app.use('/api/auth', authRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Home route
 app.get('/', (req, res) => {
