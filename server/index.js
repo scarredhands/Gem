@@ -10,7 +10,7 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
-
+const BACKEND_URL = 'https://gem-backend.onrender.com';
 // Middleware
 app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json()); // Body parser
@@ -65,7 +65,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
 // --- API Endpoint: /generate_with_image ---
-app.post('/generate_with_image', (req, res) => {
+app.post('${BACKEND_URL}/generate_with_image', (req, res) => {
   // Use the 'upload' middleware to handle the file
   upload(req, res, async (err) => {
     // Handle multer errors (e.g., file too large, wrong file type)
