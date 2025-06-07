@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 const BACKEND_URL = 'https://gem-backend.onrender.com';
 // Middleware
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://gem-qp4aizuxz-scarredhands-projects.vercel.app/' }));
 app.use(express.json()); // Body parser
 
 // // Configure multer
