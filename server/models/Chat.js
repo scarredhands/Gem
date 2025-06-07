@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 // Define the schema for chat logs
 const ChatSchema = new mongoose.Schema({
@@ -16,4 +16,4 @@ const ChatSchema = new mongoose.Schema({
 // Create a Chat model based on the schema
 const Chat = mongoose.model('Chat', ChatSchema);
 
-module.exports = Chat;
+export default Chat;

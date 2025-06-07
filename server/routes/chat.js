@@ -1,7 +1,7 @@
-const express = require('express');
-const Chat = require('../models/Chat'); // Import the Chat model
+import express from 'express';
+import Chat from '../models/Chat.js'; // Note the added '.js' extension
 const router = express.Router();
-
+import mongoose from 'mongoose';
 // Use a dynamic import to load the ES module
 let runChat;
 
@@ -52,5 +52,5 @@ router.get('/chat/history/:userId', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
 

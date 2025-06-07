@@ -1,19 +1,21 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const connectDB = require('./config/db');
-const multer = require('multer');
-const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai');
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import multer from 'multer';
+import connectDB from './config/db.js'; // Added .js extension
+import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
 
-// Load environment variables
+// Load environment variables immediately
 dotenv.config();
 
 // Initialize Express app
 const app = express();
 const BACKEND_URL = 'https://gem-backend.onrender.com';
+
 // Middleware
 app.use(cors({ origin: 'https://gem-qp4aizuxz-scarredhands-projects.vercel.app' }));
 app.use(express.json()); // Body parser
+//app.use(cors()); // Uncomment this line if you want to allow all origins (not recommended for production)
 
 // // Configure multer
 // const storage = multer.memoryStorage(); // Store files in memory
