@@ -5,7 +5,7 @@ import multer from 'multer';
 import connectDB from './config/db.js'; // Added .js extension
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
 import authRoutes from './routes/auth.js';
-import chatRoutes from './routes/chats.js'; 
+import chatRoutes from './routes/chat.js'; 
 // Load environment variables immediately
 dotenv.config();
 
