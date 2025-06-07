@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
-
+const BACKEND_URL = 'https://gem-backend.onrender.com';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:3000/api/auth/login', {
+            const response = await fetch('${BACKEND_URL}/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

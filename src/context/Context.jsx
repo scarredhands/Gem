@@ -10,7 +10,7 @@ const ContextProvider = (props) => {
     const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
     const [resultData, setResultData] = useState("");
-
+const BACKEND_URL = 'https://gem-backend.onrender.com';
     function delayPara(index, nextWord) {
         setTimeout(function () {
             setResultData(prev => prev + nextWord);
@@ -54,7 +54,7 @@ const ContextProvider = (props) => {
                 console.log(key, value);
             }
 
-            const response = await fetch('http://localhost:3000/generate_with_image', {
+            const response = await fetch('${BACKEND_URL}/generate_with_image', {
                 method: 'POST',
                 body: formData,
             });

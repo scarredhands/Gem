@@ -1,7 +1,8 @@
 // Function to fetch chat history
+const BACKEND_URL = 'https://gem-backend.onrender.com';
 async function fetchChatHistory(userId) {
     try {
-      const response = await fetch(`/api/chat/history/${userId}`, {
+      const response = await fetch(`${BACKEND_URL}/api/chat/history/${userId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include the JWT token if authentication is needed

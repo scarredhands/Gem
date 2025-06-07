@@ -7,12 +7,12 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-
+const BACKEND_URL = 'https://gem-backend.onrender.com';
     const handleRegister = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/api/auth/register', { // Adjust the endpoint as needed
+            const response = await fetch('${BACKEND_URL}/api/auth/register', { // Adjust the endpoint as needed
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
